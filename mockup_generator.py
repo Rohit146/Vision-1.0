@@ -1,7 +1,5 @@
+import openai
 import os
-from openai import OpenAI
-
-client = OpenAI()
 
 def generate_mockup(context, role="Business Analyst"):
     api_key = os.getenv("OPENAI_API_KEY")
@@ -15,13 +13,9 @@ Use the data summary and prompt below to draft a professional business report or
 
 {context}
 """
-    response = client.chat.completions.create(
-    model="gpt-4o-mini",
-    messages=[
-        {"role": "system", "content": "You are a helpful assistant."},
-        {"role": "user", "content": user_prompt}
-    ]
-)
-
+    response = openai.ChatCompletion.create(
+        model="gpt-5",
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.7,
+    )
     return response.choices[0].message.content.strip()
-
