@@ -3,6 +3,7 @@ pandas
 openpyxl
 plotly
 python-dotenv
-openai
+openai==0.28
 reportlab
 python-docx
+
