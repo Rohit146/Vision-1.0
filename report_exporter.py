@@ -4,6 +4,7 @@ from reportlab.lib.styles import getSampleStyleSheet
 import tempfile
 
 def export_pdf(content):
+    """Generate a temporary PDF from the AI-generated content"""
     styles = getSampleStyleSheet()
     tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".pdf")
     doc = SimpleDocTemplate(tmp.name, pagesize=A4)
