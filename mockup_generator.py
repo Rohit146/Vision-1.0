@@ -16,6 +16,7 @@ Use the data summary and prompt below to draft a professional business report or
     response = openai.ChatCompletion.create(
         model="gpt-5",
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.7,
+        temperature=1,
     )
     return response.choices[0].message.content.strip()
+
