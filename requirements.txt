@@ -1,9 +1,7 @@
-streamlit
-pandas
-openpyxl
-plotly
+openai>=1.12.0
 python-dotenv
-openai==0.28
+pandas
+streamlit
+plotly
 reportlab
 python-docx
-
