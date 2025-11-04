@@ -5,3 +5,5 @@ streamlit
 plotly
 reportlab
 python-docx
+openpyxl
+
