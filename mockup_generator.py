@@ -39,7 +39,7 @@ def generate_image_mockup(user_prompt):
     )
 
     response = client.images.generate(
-        model="gpt-4.1-mini",
+        model="gpt-image-1",
         prompt=image_prompt,
         size="1024x1024",
     )
@@ -47,4 +47,5 @@ def generate_image_mockup(user_prompt):
     image_base64 = response.data[0].b64_json
     image_bytes = base64.b64decode(image_base64)
     return image_bytes
+
 
